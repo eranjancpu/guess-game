@@ -4,28 +4,38 @@ using namespace std;
 
 int main()
 {
-    string scNUM = "11223344556677889911";
-    string gessNUM;
-    cout << "type  the scNUM ";
-    cin >> gessNUM;
-    if(gessNUM != scNUM){
-        cout << "secret number was wrong, please try again. attamp = 2 type = ";
+    /*hello this is the code of the guess game by jeenath*/
+    cout << "welcome to guess game 2.0.0" << endl;
+    string gamestart;
+    cout << "type start to start the game ";
+    cin >> gamestart;
+    if(gamestart == "start"){
+        string scNUM = "11223344556677889911";
+        string gessNUM;
+        cout << "type  the secret number ";
         cin >> gessNUM;
         if(gessNUM != scNUM){
-            cout << "secret number was wrong, please try again. attamp = 1 type = ";
+            cout << "secret number was wrong, please try again. attam = 2 type = ";
             cin >> gessNUM;
             if(gessNUM != scNUM){
-                while (free){
-                    cout << "sorry, try again";
+                cout << "secret number was wrong, please try again. attam = 1 type = ";
+                cin >> gessNUM;
+                if(gessNUM != scNUM){
+                    while (free){
+                        cout << "sorry, try again";
+                    }
+                }else if(gessNUM == scNUM){
+                    cout << "yes, you win!!";
+                    return 0;
                 }
-            }else{
+            }else if(gessNUM == scNUM){
                 cout << "yes, you win!!";
+                return 0;
             }
-        }else{
+        }else if(gessNUM == scNUM){
             cout << "yes, you win!!";
+            return 0;
         }
-    }else{
-        cout << "yes, you win!!";
     }
     return 0;
 }
